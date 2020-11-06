@@ -26,6 +26,21 @@ local tree = {
         "\n**Par défaut 3 : `nouv`**",
     },
 }
+local data = {
+    gens = {
+        ["adel1e#7791"] = {["genre"] = 1,},--1 = féminin, 0 = masculin, 2 = autre
+        ["adele#0057"] = {["genre"] = 0},
+        ["bewbew#8634"] = {["genre"] = 0},
+        ["couclico#7383"] = {["genre"] = 1,["hasTools"]=true},
+        ["helllooooo#1230"] = {["genre"]=0},
+        ["Impostor#9988"] = {["genre"] = 2,["isBot"]=true},
+        ["julia.l#4091"] = {["genre"]=1},
+        ["NastuBest#1066"] = {["genre"]=0},
+        ["NDtimo#1913"] = {["genre"]=0},
+        ["Sam.#2284"] = {["genre"]=0,["hasTools"]=true},
+        ["swyrl_nartex#0756"] = {["genre"]=0},
+    },
+}
 
 client:on('ready', function()
     print('Logged in as '.. client.user.username)
@@ -50,7 +65,7 @@ client:on('messageCreate', function(message)
         if cmd[2] then
             if tostring(cmd[2]) and #cmd[2] == 6 then
                 if not cmd[3] and cmd[2] or cmd[3]:sub(1,4) == "nouv" or cmd[3] == "new" then
-                    code.current = cmd[2]
+                    code.current = string.upper(cmd[2])
                     if code.lastPin then
                     code.lastPin:unpin()
                     end
@@ -61,7 +76,7 @@ client:on('messageCreate', function(message)
                     if admin[author] then
                         if cmd[4] then
                             if cmd[4] == "true" then
-                                message:reply("@everyone, le code est "..code.current)
+                                message:reply("@everyone, le code est " .. code.current)
                             end
                         end
                     end
