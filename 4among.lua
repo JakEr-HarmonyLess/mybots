@@ -107,4 +107,4 @@ client:on('messageCreate', function(message)
     end
 end)
 
-client:run('Bot token')
+client:run('Bot '..token)
