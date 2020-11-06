@@ -29,7 +29,7 @@ local tree = {
 local data = {
     gens = {
         ["adel1e#7791"] = {["genre"] = 1,},--1 = féminin, 0 = masculin, 2 = autre
-        ["adele#0057"] = {["genre"] = 0},
+        ["adele#0057"] = {["genre"] = 1},
         ["bewbew#8634"] = {["genre"] = 0},
         ["couclico#7383"] = {["genre"] = 1,["hasTools"]=true},
         ["helllooooo#1230"] = {["genre"]=0},
