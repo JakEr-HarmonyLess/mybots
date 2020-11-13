@@ -1,4 +1,3 @@
-local token = 'Nzc0Mjk4MDg0NTUyNDc0Njk1.X6VvSQ.POkyIiudHoczkgJ5PwRvYwzs_CM'
 local discordia = require('discordia')
 local client = discordia.Client()
 discordia.extensions()
